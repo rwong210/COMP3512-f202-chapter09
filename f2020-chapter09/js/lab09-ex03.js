@@ -4,7 +4,7 @@
 const list = document.querySelector("#thumb-list");
 
 //create list item <li>
-const item = document.createElement("img");
+const item = document.createElement("li");
 
 //create <img> elementand set its src attribute
 const img = document.createElement("img");
