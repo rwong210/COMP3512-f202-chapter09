@@ -26,9 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // event listener for reset button
     document.querySelector("#resetFilters").addEventListener('click', function (e) {
-        e.stopPropagation();
         reset(e);
+        e.stopPropagation();
     })
     // function to change slider values
     function changeSlider(e) {
@@ -44,6 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // function to reset image filter
     function reset(e) {
         image.style.filter = ("none");
+        e.stopPropagation();
     }
-
 });
