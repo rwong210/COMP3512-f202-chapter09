@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //click handler for thumbnail image
     for (let thumbNail of thumbNails) {
-        thumbNail.addEventListener('click', function () {
+        thumbNail.addEventListener('click', function (e) {
             let focused = document.querySelector("figure img");
-            let newSrc = thumbNail.src;
+            let newSrc = e.target.src;
             newSrc = newSrc.replace("small", "medium");
             focused.src = newSrc;
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#resetFilters").addEventListener('click', function (e) {
         reset(e);
         e.stopPropagation();
-    })
+    });
     // function to change slider values
     function changeSlider(e) {
         // set image filters value based on associated slider value
